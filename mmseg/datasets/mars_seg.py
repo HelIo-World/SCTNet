@@ -1,8 +1,8 @@
 from .builder import DATASETS
-from . import BaseSegDataset
+from .custom import CustomDataset
 
 @DATASETS.register_module()
-class MarsSegDataset(BaseSegDataset):
+class MarsSegDataset(CustomDataset):
     METAINFO = dict(
         # 一共 10 个有效类别（索引 0 到 9）
         classes=('soil', 'sand', 'gravel', 'bedrock', 'rock', 

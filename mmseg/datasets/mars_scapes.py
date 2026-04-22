@@ -6,13 +6,13 @@ import numpy as np
 from PIL import Image
 
 from .builder import DATASETS
-from . import BaseSegDataset
+from .custom import CustomDataset
 
 import sys
 sys.path.append("../../marsscapes")
 
 @DATASETS.register_module()
-class MarsscapesDataset(BaseSegDataset):
+class MarsscapesDataset(CustomDataset):
     """marsscapes dataset."""
     
     METAINFO = dict(
