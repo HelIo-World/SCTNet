@@ -15,12 +15,10 @@ sys.path.append("../../marsscapes")
 class MarsscapesDataset(CustomDataset):
     """marsscapes dataset."""
     
-    METAINFO = dict(
-        classes=('soil', 'bedrock', 'gravel', 'sand', 
-               'big rock', 'sky', 'ridge', 'rover', 'unknown'),
-        palette=[[0, 0, 255], [0, 255, 0], [255, 0, 0], [255, 0, 255],
-               [255, 255, 0], [34, 56, 19], [128, 128, 128], [0, 85, 0],[170, 85, 0]]
-    )
+    CLASSES=('soil', 'bedrock', 'gravel', 'sand', 
+            'big rock', 'sky', 'ridge', 'rover', 'unknown'),
+    PALETTE=[[0, 0, 255], [0, 255, 0], [255, 0, 0], [255, 0, 255],
+            [255, 255, 0], [34, 56, 19], [128, 128, 128], [0, 85, 0],[170, 85, 0]]
 
     def __init__(self, **kwargs):
         super(MarsscapesDataset, self).__init__(
