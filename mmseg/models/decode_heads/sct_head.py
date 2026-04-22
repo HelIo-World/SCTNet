@@ -59,7 +59,8 @@ class SCTHead(BaseDecodeHead):
         """
         decoder_feature,seg_logits = self.forward(inputs)
         losses = self.losses(seg_logits, gt_semantic_seg)
-        return losses,decoder_feature,seg_logits
+        # return losses,decoder_feature,seg_logits
+        return losses
             
     def forward_test(self, inputs, img_metas, test_cfg):
         """Forward function for testing.
