@@ -3,7 +3,7 @@ _base_ = ['../_base_/datasets/mars-seg.py']
 # model
 checkpoint_backbone = 'pretrain/SCT-B_Pretrain.pth'
 norm_cfg = dict(type='SyncBN', requires_grad=True)
-num_classes = 8
+num_classes = 9
 model = dict(
     type='EncoderDecoder',
     pretrained=None,

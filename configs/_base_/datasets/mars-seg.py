@@ -5,7 +5,7 @@ data_root = 'data/mars_seg'
 # 0.x 必须显式定义归一化参数，通常模型默认使用这些均值和方差
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
-crop_size = (480, 480)
+crop_size = (500, 560)
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
@@ -37,7 +37,7 @@ test_pipeline = [
 ]
 
 data = dict(
-    samples_per_gpu=2,  # 对应 1.x train_dataloader 的 batch_size
+    samples_per_gpu=8,  # 对应 1.x train_dataloader 的 batch_size
     workers_per_gpu=2,
     train=dict(
         type=dataset_type,
