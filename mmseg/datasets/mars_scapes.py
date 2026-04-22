@@ -5,7 +5,7 @@ import mmcv
 import numpy as np
 from PIL import Image
 
-from mmseg.registry import DATASETS
+from .builder import DATASETS
 from . import BaseSegDataset
 
 import sys

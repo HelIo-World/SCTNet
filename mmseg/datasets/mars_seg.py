@@ -1,6 +1,5 @@
-from mmseg.registry import DATASETS
-from .basesegdataset import BaseSegDataset
-import mmengine.fileio as fileio
+from .builder import DATASETS
+from . import BaseSegDataset
 
 @DATASETS.register_module()
 class MarsSegDataset(BaseSegDataset):
