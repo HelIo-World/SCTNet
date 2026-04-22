@@ -5,7 +5,7 @@ from .custom import CustomDataset
 class MarsSegDataset(CustomDataset):
     # 一共 10 个有效类别（索引 0 到 9）
     CLASSES=('soil', 'sand', 'gravel', 'bedrock', 'rock', 
-                'track', 'shadow', 'background', 'unknown'),
+                'track', 'shadow', 'background', 'unknown')
     # 为可视化配置的 RGB 颜色表
     PALETTE=[
         (128, 0, 0),         
